@@ -4,11 +4,11 @@ class @CarView
     @buildingBaseY = 450
 
   render: ->
-    @ctx.strokeRect @x(), @y(), 30, 50
+    @ctx.strokeRect @x(), @y(), @car.width, @car.height
 
   x: ->
     @building.x + 150
 
   y: ->
-    @building.y + @building.height - 50 - @car.location
+    @building.y + @building.height - @car.height - @car.location
 
