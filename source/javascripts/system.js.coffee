@@ -1,5 +1,6 @@
 class @System
   constructor: ->
+    @building = new Building
     @car = new Car
 
   currentLocation: ->

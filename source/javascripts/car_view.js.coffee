@@ -1,5 +1,5 @@
 class @CarView
-  constructor: (@car, @ctx) ->
+  constructor: (@car, @building, @ctx) ->
     @buildingBaseX = 200
     @buildingBaseY = 450
 
@@ -7,8 +7,8 @@ class @CarView
     @ctx.strokeRect @x(), @y(), 30, 50
 
   x: ->
-    @buildingBaseX + 150
+    @building.x + 150
 
   y: ->
-    @buildingBaseY - 50 - @car.location
+    @building.y + @building.height - 50 - @car.location
 
