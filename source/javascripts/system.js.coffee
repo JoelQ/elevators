@@ -12,4 +12,4 @@ class @System
     if @car.location < @destination
       @car.moveUp()
     else if @car.location > @destination
-      @care.moveDown()
+      @car.moveDown()

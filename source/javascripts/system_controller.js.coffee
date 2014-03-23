@@ -5,5 +5,11 @@ class @SystemController
     @system = new System
     @view = new SystemView(@system, ctx)
 
-  start: ->
+
+  tick: =>
+    @system.tick()
     @view.render()
+    requestAnimationFrame @tick
+
+  start: ->
+    requestAnimationFrame @tick
