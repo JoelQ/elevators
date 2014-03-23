@@ -2,6 +2,7 @@ class @System
   constructor: ->
     @building = new Building
     @car = new Car
+    @character = new Character
 
   currentLocation: ->
     @car.location

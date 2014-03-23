@@ -1,6 +1,7 @@
 class @SystemView
   constructor: (@system, @ctx) ->
     @buildingView = new BuildingView(@system.building, @ctx)
+    @characterView = new CharacterView(@system.character, @ctx)
     @carView = new CarView(@system.car, @system.building, @ctx)
 
   render: ->
@@ -10,6 +11,7 @@ class @SystemView
     @ctx.fillText @_currentLocation(), 65, 93
 
     @buildingView.render()
+    @characterView.render()
     @carView.render()
 
 
