@@ -13,7 +13,7 @@
     };
 
     Building.prototype.lastFloor = function() {
-      return this.y - this.floorHeight;
+      return this.y + this.floorHeight;
     };
 
     Building.prototype.firstFloor = function() {
