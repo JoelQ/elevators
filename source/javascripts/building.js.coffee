@@ -11,7 +11,7 @@ class @Building
     @x + @width
 
   lastFloor: ->
-    @y - @floorHeight
+    @y + @floorHeight
 
   firstFloor: ->
     @y + @height - @floorHeight
