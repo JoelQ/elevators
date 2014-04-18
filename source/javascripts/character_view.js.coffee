@@ -8,6 +8,9 @@ class @CharacterView
     @ctx.lineTo @character.x + 10, @character.y - (@character.height/4)
     @ctx.lineTo @character.x + 20, @character.y
 
+    @ctx.moveTo @character.x, @character.y - (@character.height/2)
+    @ctx.lineTo @character.x + 20, @character.y - (@character.height/2)
+
     @ctx.moveTo @character.x + 10, @character.y - (@character.height/4)
     @ctx.lineTo @character.x + 10, @character.y - 3*(@character.height/4)
 
