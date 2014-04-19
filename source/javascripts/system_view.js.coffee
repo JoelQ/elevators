@@ -11,7 +11,7 @@ class @SystemView
     @ctx.fillText @_currentLocation(), 65, 93
 
     @buildingView.render()
-    @characterView.render()
+    @characterView.render() unless @system.car.passengers.length > 0
     @carView.render()
 
 
