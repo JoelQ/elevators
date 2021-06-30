@@ -1,12 +1,13 @@
 class @Car
-  constructor: ->
-    @location = 0
+  constructor: (building) ->
     @width = 30
     @height = 50
+    @x = building.x + 150
+    @y = building.y + building.height - @height
     @passengers = []
 
   moveUp: ->
-    @location += 1
+    @y -= 1
 
   moveDown: ->
-    @location -= 1
+    @y += 1

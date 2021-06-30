@@ -1,14 +1,14 @@
 class @System
   constructor: ->
     @building = new Building
-    @car = new Car
+    @car = new Car(@building)
     @character = new Character
 
   currentLocation: ->
     @car.location
 
-  moveTo: (destination) ->
-    @destination = destination
+  moveTo: (floor) ->
+    @destination = @building.y + @building.height - (floor * @building.floorHeight) - @car.height
 
   tick: ->
     if @_loadingPassengers()
@@ -19,13 +19,14 @@ class @System
       else
         @character.x += 5
     else
-      if @car.location < @destination
+      console.log @car.y, @destination
+      if @car.y > @destination
         @car.moveUp()
-      else if @car.location > @destination
+      else if @car.y < @destination
         @car.moveDown()
 
   _loadingPassengers: ->
-    @character.location() == @car.location
+    @character.y == @car.y
 
   _characterInElevator: ->
     @character.x > (@building.x + 150)

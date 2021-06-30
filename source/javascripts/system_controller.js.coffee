@@ -20,4 +20,4 @@ class @SystemController
   _handleKeypress: (e) =>
     floor =  e.keyCode - 48
     if 0 <= floor < 8
-      @system.moveTo floor * 50
+      @system.moveTo floor
